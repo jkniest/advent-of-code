@@ -50,7 +50,7 @@ func day2_2_checkNumRec(number int, remaining int) int {
 	digits := len(numStr)
 
 	remainingRange := utils.BuildRangeSlice(0, remaining-1)
-	parts := utils.Map(remainingRange, func(i int) string {
+	parts := utils.Map(remainingRange, func(i int, _ int) string {
 		dd := digits / remaining
 		return numStr[i*dd : i*dd+dd]
 	})
